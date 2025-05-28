@@ -293,9 +293,22 @@
   }
 
   .back-to-top {
-    position: absolute;
-    top: 270%;
-    width: 30%;
-    left: 35%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
   }
-
+  
+  .back-to-top:hover {
+    background-color: #555;
+  }
+  
