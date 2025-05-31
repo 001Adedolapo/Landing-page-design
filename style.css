@@ -51,6 +51,12 @@
     color: #00b894;
   }
   
+  @media (min-width: 768px) {
+    .logo {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
   .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -61,6 +67,8 @@
     transition: color 0.3s;
   }
   
+  
+
   .nav-links a:hover {
     color: #00cec9;
   }
@@ -274,7 +282,7 @@
   }
   
   .newsletter input {
-    padding: 0.5rem;
+    padding: 0.9rem;
     flex: 1;
     border-radius: 5px;
     border: none;
@@ -323,4 +331,74 @@
 
 .back-to-top:hover {
   background-color: #555;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #333;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+  display: block;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive nav: hamburger menu overlays and centers links */
+@media (max-width: 900px) {
+  .container.nav {
+    flex-direction: row;
+    position: relative;
+  }
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-links.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+    z-index: 1100;
+  }
 }

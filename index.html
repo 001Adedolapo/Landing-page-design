@@ -7,19 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+<script src="main.js" defer></script>
+ 
+
   <!-- Header -->
   <header class="sticky-header">
-    <nav class="container nav">
-      <div class="logo">TechNova</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#learn">Learn</a></li>
-        <li><a href="#jobs">Post a Job</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#login">Login / Sign Up</a></li>
-        <li><a href="#cta" class="btn-primary">Join Now</a></li>
-      </ul>
-    </nav>
+  <nav class="container nav">
+    <div class="logo">TechNova</div>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#jobs">Post a Job</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#login">Login / Sign Up</a></li>
+      <li><a href="#cta" class="btn-primary">Join Now</a></li>
+    </ul>
+  </nav>
   </header>  <!-- Hero Section -->  <section id="hero" class="hero">
     <div class="container hero-content">
       <div class="hero-text">
@@ -95,13 +103,13 @@
       <h2>What Our Users Say</h2>
       <div class="testimonial-list">
         <div class="testimonial">
-          <img src="assets/users/user1.jpg" alt="Jane Doe">
+          <img src="jane.jpeg" alt="Jane Doe">
           <p>“TechNova helped me grow from a beginner to a freelance developer. The mentorship is amazing!”</p>
           <h4>Jane Doe</h4>
           <span>Frontend Developer</span>
         </div>
         <div class="testimonial">
-          <img src="assets/users/user2.jpg" alt="Mark Lee">
+          <img src="mark.jpeg" alt="Mark Lee">
           <p>“We hired a skilled developer for our startup via TechNova. Very smooth experience.”</p>
           <h4>Mark Lee</h4>
           <span>Startup Founder</span>
@@ -131,9 +139,9 @@
         <p>LinkedIn: TechNova</p>
       </div>
       <div class="footer-social">
-        <a href="#"><img src="facebook.jpeg" alt="Facebook" width="10%"></a>
-        <a href="#"><img src="Logo_of_Twitter.svg.png" alt="Twitter" width="10%"></a>
-        <a href="#"><img src="Linked in.png" alt="LinkedIn" width="10%"></a>
+        <a href="#"><img src="facebook.jpeg" alt="Facebook" width="5%"></a>
+        <a href="#"><img src="Logo_of_Twitter.svg.png" alt="Twitter" width="5%"></a>
+        <a href="#"><img src="Linked in.png" alt="LinkedIn" width="5%"></a>
       </div>
       <form class="newsletter">
         <input type="email" placeholder="Subscribe to newsletter" required />
@@ -145,6 +153,12 @@
           &#8679;
         </button>
         
+        <!-- ...existing code... -->
+  <script>
+    
+  </script>
+</body>
+</html>
 
       </div>
     </div>

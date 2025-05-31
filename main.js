@@ -24,3 +24,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     backToTopButton.style.display = 'none';
   });
 
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+  }
+
+ const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+    });
+
+    // Optional: Close menu when a link is clicked (mobile UX)
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth <= 900){
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', false);
+        }
+      });
+    });
