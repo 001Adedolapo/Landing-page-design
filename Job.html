@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Job | TechNova</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Extra styling for the job form for a more professional look */
+    .job-hero {
+      background: linear-gradient(90deg, #00b894 0%, #00cec9 100%);
+      color: #fff;
+      padding: 3rem 0 2rem 0;
+      text-align: center;
+    }
+    .job-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    .job-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .job-form-section {
+      background: #f8f9fa;
+      padding: 3rem 0;
+    }
+    .job-form-container {
+      background: #fff;
+      max-width: 520px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 2.5rem 2rem;
+    }
+    .job-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      color: #00b894;
+    }
+    .form-group {
+      margin-bottom: 1.3rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fafafa;
+      transition: border 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #00b894;
+      outline: none;
+      background: #fff;
+    }
+    .job-form button[type="submit"] {
+      width: 100%;
+      padding: 0.9rem 0;
+      background: linear-gradient(90deg, #00b894 0%, #00cec9 100%);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .job-form button[type="submit"]:hover {
+      background: linear-gradient(90deg, #00cec9 0%, #00b894 100%);
+    }
+    @media (max-width: 600px) {
+      .job-form-container {
+        padding: 1.2rem 0.5rem;
+      }
+      .job-hero h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="sticky-header">
+    <nav class="container nav">
+      <div class="logo">TechNova</div>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="Job.html" class="active">Post a Job</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#login">Login / Sign Up</a></li>
+        <li><a href="index.html#cta" class="btn-primary">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="job-hero">
+    <div class="container">
+      <h1>Post a Tech Job or Project</h1>
+      <p>Connect with top tech talent. Fill out the form below to post your job or project and reach our vibrant community of developers, designers, and digital experts.</p>
+    </div>
+  </section>
+
+  <!-- Job Posting Form -->
+  <section class="job-form-section">
+    <div class="job-form-container">
+      <form class="job-form">
+        <h2>Job/Project Details</h2>
+        <div class="form-group">
+          <label for="company">Company/Client Name</label>
+          <input type="text" id="company" name="company" placeholder="Your company or name" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Job/Project Title</label>
+          <input type="text" id="title" name="title" placeholder="e.g. Frontend Developer, UI/UX Designer" required>
+        </div>
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select id="type" name="type" required>
+            <option value="">Select type</option>
+            <option value="fulltime">Full Time</option>
+            <option value="parttime">Part Time</option>
+            <option value="contract">Contract</option>
+            <option value="freelance">Freelance</option>
+            <option value="internship">Internship</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location">Location (or Remote)</label>
+          <input type="text" id="location" name="location" placeholder="e.g. Remote, Lagos, New York" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Job/Project Description</label>
+          <textarea id="description" name="description" rows="5" placeholder="Describe the role, requirements, and expectations..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="email">Contact Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <button type="submit">Post Job</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter-cta">
+    <div class="container">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest jobs, events, and tech news.</p>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html#hero">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="Job.html">Post a Job</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-contact">
+        <p>Email: support@technova.io</p>
+        <p>WhatsApp: +123 456 7890</p>
+        <p>LinkedIn: TechNova</p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="facebook.jpeg" alt="Facebook" width="5%"></a>
+        <a href="#"><img src="Logo_of_Twitter.svg.png" alt="Twitter" width="5%"></a>
+        <a href="#"><img src="Linked in.png" alt="LinkedIn" width="5%"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe to newsletter" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-bottom">
+        <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="back-to-top" aria-label="Back to top">
+          &#8679;
+        </button>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

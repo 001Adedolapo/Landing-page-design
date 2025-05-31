@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn | TechNova</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header (reuse from index.html) -->
+  <header class="sticky-header">
+    <nav class="container nav">
+      <div class="logo">TechNova</div>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="learn.html" class="active">Learn</a></li>
+        <li><a href="index.html#jobs">Post a Job</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#login">Login / Sign Up</a></li>
+        <li><a href="index.html#cta" class="btn-primary">Join Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Learn Hero Section -->
+  <section class="hero" style="background: #f8f9fa;">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Grow Your Tech Skills</h1>
+        <p>Explore curated resources, live sessions, and mentorship to accelerate your learning journey.</p>
+        <a href="#courses" class="btn-primary">Browse Courses</a>
+      </div>
+      <div class="hero-image">
+        <img src="learning.png" alt="Learning Illustration" style="max-width: 350px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Courses -->
+  <section id="courses" class="courses-section">
+    <div class="container">
+      <h2>Featured Courses</h2>
+      <div class="courses-list">
+        <div class="course-card">
+          <img src="web develeopment.jpeg" alt="Web Development" width="50%">
+          <h3>Web Development Bootcamp</h3>
+          <p>Learn HTML, CSS, JavaScript, and React from scratch. Build real-world projects and get certified.</p>
+          <br>
+          <a href="#" class="btn-secondary">View Details</a>
+        </div>
+        <div class="course-card">
+          <img src="Python.svg.png" alt="Python Programming" width="50%">
+          <h3>Python for Beginners</h3>
+          <p>Master Python programming with hands-on exercises and mini-projects. No prior experience needed.</p>
+          <br>
+          <a href="#" class="btn-secondary">View Details</a>
+        </div>
+        <div class="course-card">
+          <img src="ux.png" alt="UI/UX Design" width="50%">
+          <h3>UI/UX Design Essentials</h3>
+          <p>Understand the fundamentals of user interface and user experience design with practical examples.</p>
+          <br>
+          <a href="#" class="btn-secondary">View Details</a> <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentorship Section -->
+  <section class="mentorship-section" style="background: #f4f8fb;">
+    <div class="container">
+      <h2>Mentorship & Community</h2>
+      <div class="mentorship-content">
+        <div>
+          <h3>1-on-1 Mentorship</h3>
+          <p>Connect with experienced mentors for personalized guidance, code reviews, and career advice.</p>
+        </div>
+        <div>
+          <h3>Live Learning Sessions</h3>
+          <p>Join weekly live sessions and webinars on trending tech topics, led by industry experts.</p>
+        </div>
+        <div>
+          <h3>Community Support</h3>
+          <p>Get help, share progress, and collaborate with other learners in our active online community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="newsletter-cta">
+    <div class="container">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest courses, events, and tech news.</p>
+      <form class="newsletter">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (reuse from index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html#hero">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="index.html#jobs">Post a Job</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="footer-contact">
+        <p>Email: support@technova.io</p>
+        <p>WhatsApp: +123 456 7890</p>
+        <p>LinkedIn: TechNova</p>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="facebook.jpeg" alt="Facebook" width="5%"></a>
+        <a href="#"><img src="Logo_of_Twitter.svg.png" alt="Twitter" width="5%"></a>
+        <a href="#"><img src="Linked in.png" alt="LinkedIn" width="5%"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Subscribe to newsletter" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-bottom">
+        <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="back-to-top" aria-label="Back to top">
+          &#8679;
+        </button>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
